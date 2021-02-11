@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.Properties;
 
+import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
@@ -19,7 +20,7 @@ public class ConsumerTest {
     props.setProperty("auto.commit.interval.ms", "1000");
     props.setProperty("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
     props.setProperty("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-    KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
+    Consumer<String, String> consumer = new KafkaConsumer<>(props);
     consumer.subscribe(Arrays.asList("test"));
     
     boolean flag = true;
