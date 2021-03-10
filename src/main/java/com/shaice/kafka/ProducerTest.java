@@ -14,7 +14,7 @@ public class ProducerTest {
         Properties props = initConfig();
         Producer<String, String> producer = new KafkaProducer<>(props);
         ProducerRecord<String, String> record = null;
-        ProduceCallback callback = new ProduceCallback();
+        // ProduceCallback callback = new ProduceCallback();
         try {
             for (int i = 0; i < 10; i++){
                 record = new ProducerRecord<>("test", getKey(i), "+"+Integer.toString(i));
