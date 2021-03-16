@@ -1,4 +1,4 @@
-package com.shaice.kafka;
+package com.shaice.kafka.sample;
 
 import java.time.Duration;
 import java.util.Arrays;

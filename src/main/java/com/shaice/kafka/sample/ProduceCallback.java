@@ -1,4 +1,4 @@
-package com.shaice.kafka;
+package com.shaice.kafka.sample;
 
 import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.RecordMetadata;
